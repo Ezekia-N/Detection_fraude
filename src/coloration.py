@@ -1,3 +1,5 @@
+import streamlit as st
+import networkx
 from generation_graphe import *
 
 colors_dict = {
@@ -16,6 +18,11 @@ colors_dict = {
 def coloration_graph():
     colors = list(colors_dict.values())
     length = len(colors)
+    
+    if len(st.session_state.graph.nodes) == 0:
+        st.error("Entrez le nombre n des noeuds dans la panneau latérale gauche")
+        return 
+
     if nx.is_connected(st.session_state.graph):
         for node in st.session_state.graph.nodes:
             index = 0

@@ -7,6 +7,7 @@ def graphe_init():
     if "graph" not in st.session_state:
         st.session_state.graph = nx.Graph()
 
+    # Initialiser le numéro de noeud
     if "node_number" not in st.session_state:
         st.session_state.node_number = 1
 

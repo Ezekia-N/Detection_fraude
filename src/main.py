@@ -10,10 +10,7 @@ if __name__ == '__main__':
     graphe_init()
     node_construction()
     edge_construction()
-
-    st.subheader("Coloration de graphe")
-    if st.button("Colorier le graphe"):
-        coloration_graph()
+    coloration_graph()
 
     st.subheader("Recherche des cliques de ce graphe")
     if st.button("Trouver les cliques dans le graphe"):

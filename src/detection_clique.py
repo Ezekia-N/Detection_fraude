@@ -27,7 +27,7 @@ def find_clique():
 
         current_clique.sort()
         
-        if len(current_clique) >= 2 and current_clique not in cliques:
+        if len(current_clique) >= 3 and current_clique not in cliques:
             cliques.append(current_clique)
 
     return cliques
